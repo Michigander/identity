@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;740;900&display=swap');
+
+      body {
+        font-family: 'Inter', monospace;
+        background-color: #f4f4f4;
+        color: #111;
+        --grid-cell-size: 16px;
+      }
+
+      #content {
+        background-color: rgb(245, 245, 245);
+        height: calc(100% - 48px);
+      }
+
+      #container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        grid-gap: 4px;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      #title {
+        font-size: 2rem;
+        letter-spacing: -0.055em;
+        margin-bottom: 0.25rem;
+        margin-top: 1.25rem;
+        margin:0;
+        align-self: end;
+        margin-left: -4px;
+      }
+
+      #subtitle {
+        align-self: end;
+        display: block;
+        height: 100%;
+        grid-column: 1;
+      }
+
+      .post-timestamp {
+        grid-column: 1;
+        margin-top: 16px;
+        background: rgb(235,235,235);
+        border-radius: 4px;
+        padding: 4px;
+        box-sizing: border-box;
+        width: max-content;
+      }
+
+      .post-title {
+        grid-column: 2;
+        margin-top: 16px;
+        font-weight: 740;
+      }
+
+      .post-body {
+        grid-column: 2;
+      }
+
+      @media(max-width: 500px) {
+        #container {
+          grid-template-columns: 1fr;
+        }
+
+        .post-timestamp, .post-title, .post-body {
+          grid-column: 1;
+        }
+
+        .post-title {
+          margin-top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <span id="title">Gordon Finnie III</span>
+      <span id="subtitle">Software Engineer</span>
+      <span class="post-timestamp">2020-08-10</span>
+      <span class="post-title">An Introduction</span>
+      <span class="post-body">lakjdslfkajsdlfkjalsdfkjalskdfjla kdsjfalksdjflakds jflksdjflaksjdf lakjs  dflak sjf lakjdslfkajsdlfkjalsdfkjalskdfjla kdsjfalksdjflakds jflksdjflaksjdf lakjs  dflak sjf lakjdslfkajsdlfkjalsdfkjalskdfjla kdsjfalksdjflakds jflksdjflaksjdf lakjs  dflak sjf lakjdslfkajsdlfkjalsdfkjalskdfjla kdsjfalksdjflakds jflksdjflaksjdf lakjs  dflak sjf</span>
+      <span class="post-timestamp">2020-08-10</span>
+      <span class="post-title">An Introduction</span>
+      <span class="post-body">lakjdslfkajsdlfkjalsdfkjalskdfjla kdsjfalksdjflakds jflksdjflaksjdf lakjs  dflak sjf</span>
+    </div>
+  </body>
+</html>
