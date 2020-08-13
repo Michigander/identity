@@ -3,15 +3,36 @@
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;740;900&display=swap');
 
+      html {
+        --grid-cell-size: 16px;
+        --color-primary: #111;
+        --background-color-primary: #f4f4f4;
+        --background--color-secondary: rgb(235,235,235);
+      }
+
+      @media (prefers-color-scheme: light) {
+        body {
+          --color-primary: #111;
+          --background-color-primary: #f4f4f4;
+          --background--color-secondary: rgb(235,235,235);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html {
+          --background-color-primary: #111;
+          --background-color-secondary: rgb(30, 30, 30);
+          --color-primary: #f4f4f4;
+        }
+      }
+
       body {
         font-family: 'Inter', monospace;
-        background-color: #f4f4f4;
-        color: #111;
-        --grid-cell-size: 16px;
+        background-color: var(--background-color-primary);
+        color: var(--color-primary);
       }
 
       #content {
-        background-color: rgb(245, 245, 245);
         height: calc(100% - 48px);
       }
 
@@ -45,7 +66,7 @@
       .post-timestamp {
         grid-column: 1;
         margin-top: 16px;
-        background: rgb(235,235,235);
+        background: var(--background-color-secondary);
         border-radius: 4px;
         padding: 4px;
         box-sizing: border-box;
